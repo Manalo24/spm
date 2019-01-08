@@ -5,10 +5,22 @@ public class Prodotti {
 	private double prezzo;
 	private double sconto;
 	private double scontato;
-	public Prodotti(long codice, String descrizione, double prezzo) {
+	private String nome;
+	int i=0;
+	
+	
+	public Prodotti(long codice, String descrizione, double prezzo, String nome) {
+		
 		this.codice = codice;
 		this.descrizione = descrizione;
 		this.prezzo = prezzo;
+		this.nome = nome;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	public long getCodice() {
 		return codice;
@@ -32,5 +44,13 @@ public class Prodotti {
 		sconto=(prezzo*5)/100;
 		scontato=prezzo-sconto;
 	}
+	@Override
+	public String toString() {
+		return "Prodotti [codice=" + codice + ", descrizione=" + descrizione + ", prezzo=" + prezzo + ", nome=" + nome
+				+ "]";
+	}
+
+	
+	
 	
 }
