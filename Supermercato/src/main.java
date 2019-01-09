@@ -15,26 +15,36 @@ public class main {
 		LocalDate a9=LocalDate.of(2019, 1, 18);
 		LocalDate a0=LocalDate.of(2019, 1, 11);
 		NonAlimentari obja=new NonAlimentari (1235, null, 0, null, null);
-		Alimentari obj = new Alimentari(34543, "Alimentare", 1, "mela", a1);
+		Alimentari obj = new Alimentari(34543, "Alimentare", 1, "mela",LocalDate.of(2019, 1, 10));
 		objn.AggiungiProdotto(obj);
+		obj.addDat(a1);
 		Alimentari obj1 = new Alimentari(543534, "Alimentare", 2, "pizza", a2);
 		objn.AggiungiProdotto(obj1);
+		obj.addDat(a2);
 		Alimentari obj2 = new Alimentari(213213, "Alimentare", 3, "pollo", a3);
 		objn.AggiungiProdotto(obj2);
+		obj.addDat(a3);
 		Alimentari obj3 = new Alimentari(231423, "Alimentare", 4, "uovo", a4);
 		objn.AggiungiProdotto(obj3);
+		obj.addDat(a4);
 		Alimentari obj4 = new Alimentari(4324, "Alimentare", 4, "latte", a5);
 		objn.AggiungiProdotto(obj4);
+		obj.addDat(a5);
 		Alimentari obj5 = new Alimentari(1324, "Alimentare", 5, "pane", a6);
 		objn.AggiungiProdotto(obj5);
+		obj.addDat(a6);
 		Alimentari obj6 = new Alimentari(1233, "Alimentare", 6, "torta", a7);
 		objn.AggiungiProdotto(obj6);
+		obj.addDat(a7);
 		Alimentari obj7 = new Alimentari(3213, "Alimentare", 7, "biscotti", a8);
 		objn.AggiungiProdotto(obj7);
+		obj.addDat(a8);
 		Alimentari obj8 = new Alimentari(1232, "Alimentare", 3, "caffe", a9);
 		objn.AggiungiProdotto(obj8);
+		obj.addDat(a9);
 		Alimentari obj9 = new Alimentari(1111, "Alimentare", 8, "boh", a0);
 		objn.AggiungiProdotto(obj9);
+		obj.addDat(a0);
 	
 		NonAlimentari n = new NonAlimentari(0, null, 0, null, "tre");
 		Scanner input = new Scanner(System.in);
@@ -63,7 +73,7 @@ public class main {
 				if (product.equalsIgnoreCase("A")) {
 					System.out.println("Inserisci nome prodotto:");
 					user=input.next();
-					obj.ApplicaSconto("boh");
+					objn.ApplicaSconto(user);
 				} else {
 					System.out.println("Inserisci nome prodotto:");
 					obja.applicaSconto();
