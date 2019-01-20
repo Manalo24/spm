@@ -45,7 +45,7 @@ public class NonAlimentari extends Prodotti{
 
 	@Override
 	public String toString() {
-		return "NonAlimentari [materiale=" + materiale + ", toString()=" + super.toString() + "]";
+		return "NonAlimentari [materiale=" + materiale + ", " + super.toString() + "]";
 	}
 
 	
